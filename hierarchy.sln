@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{466b754c-4388-6b5e-cd4b-cd745d6dd8ab}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.XR.Interaction.Toolkit.Samples.StarterAssets", "Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj", "{7c5883aa-482f-d3ac-e0a3-f7388ec70df7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator", "Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator.csproj", "{c021b7e4-3e39-9afb-02c4-b7f251ef8a9a}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{466b754c-4388-6b5e-cd4b-cd745d6dd8ab}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{466b754c-4388-6b5e-cd4b-cd745d6dd8ab}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7c5883aa-482f-d3ac-e0a3-f7388ec70df7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7c5883aa-482f-d3ac-e0a3-f7388ec70df7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{c021b7e4-3e39-9afb-02c4-b7f251ef8a9a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{c021b7e4-3e39-9afb-02c4-b7f251ef8a9a}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
