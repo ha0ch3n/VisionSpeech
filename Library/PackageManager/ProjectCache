@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638436302370000000
-    m_Hash: 792060826
+      ticks: 638480434830000000
+    m_Hash: 3259425020
   m_LockFileStatus:
     m_FilePath: /Users/haochen/Documents/Unity/hierarchy/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638436302370000000
-    m_Hash: 2079915047
+      ticks: 638480434830000000
+    m_Hash: 1580252171
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,32 +22,46 @@ m_LocalPackages:
 m_ProjectPath: /Users/haochen/Documents/Unity/hierarchy/Packages
 m_EditorVersion: 2022.3.4f1 (35713cd46cd7)
 m_ResolvedPackages:
-- packageId: co.parabox.csg@https://github.com/karl-/pb_CSG.git
+- packageId: com.meta.xr.sdk.voice@63.0.0
   testable: 0
   isDirectDependency: 1
-  version: 2.0.0
-  source: 5
-  resolvedPath: /Users/haochen/Documents/Unity/hierarchy/Library/PackageCache/co.parabox.csg@9b35e1c90e
-  assetPath: Packages/co.parabox.csg
-  name: co.parabox.csg
-  displayName: pb_CSG
+  version: 63.0.0
+  source: 1
+  resolvedPath: /Users/haochen/Documents/Unity/hierarchy/Library/PackageCache/com.meta.xr.sdk.voice@63.0.0
+  assetPath: Packages/com.meta.xr.sdk.voice
+  name: com.meta.xr.sdk.voice
+  displayName: Meta - Voice SDK - Immersive Voice Commands
   author:
-    name: 
+    name: Meta - Voice SDK
     email: 
-    url: 
+    url: https://wit.ai
   category: 
   type: 
-  description: A C# port of CSG.js by Evan W (http://evanw.github.io/csg.js/).
+  description: Voice SDK enables natural voice interactions for AR/VR apps, powered
+    by Wit.ai.
   status: 0
   errors: []
   versions:
-    all: []
-    compatible: []
+    all:
+    - 56.0.0-preview
+    - 57.0.0-preview
+    - 59.0.0
+    - 60.0.0
+    - 63.0.0
+    compatible:
+    - 56.0.0-preview
+    - 57.0.0-preview
+    - 59.0.0
+    - 60.0.0
+    - 63.0.0
     recommended: 
     deprecated: []
   dependencies: []
   resolvedDependencies: []
-  keywords: []
+  keywords:
+  - Meta
+  - Voice
+  - SDK
   registry:
     id: main
     name: 
@@ -57,9 +71,9 @@ m_ResolvedPackages:
     capabilities: 7
     configSource: 0
   hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
+  isAssetStorePackage: 1
+  datePublishedTicks: 638471042790000000
+  documentationUrl: https://developer.oculus.com/documentation/unity/
   hasRepository: 0
   repository:
     type: 
@@ -166,6 +180,7 @@ m_ResolvedPackages:
     - 2.1.0-preview.6
     - 2.1.0
     - 2.2.0
+    - 2.3.1
     compatible:
     - 2.0.5
     - 2.0.7
@@ -174,6 +189,7 @@ m_ResolvedPackages:
     - 2.1.0-preview.6
     - 2.1.0
     - 2.2.0
+    - 2.3.1
     recommended: 2.0.7
     deprecated: []
   dependencies: []
@@ -441,6 +457,7 @@ m_ResolvedPackages:
     - 3.2.0-pre.6
     - 3.2.0-pre.7
     - 3.2.0-pre.8
+    - 3.2.0-pre.9
     - 4.0.0-pre.1
     - 4.0.0-pre.2
     compatible:
@@ -455,6 +472,7 @@ m_ResolvedPackages:
     - 3.2.0-pre.6
     - 3.2.0-pre.7
     - 3.2.0-pre.8
+    - 3.2.0-pre.9
     - 4.0.0-pre.1
     - 4.0.0-pre.2
     recommended: 3.0.8
@@ -791,10 +809,12 @@ m_ResolvedPackages:
     - 1.8.0
     - 1.9.0
     - 1.9.1
+    - 1.9.2
     compatible:
     - 1.8.0
     - 1.9.0
     - 1.9.1
+    - 1.9.2
     recommended: 1.8.0
     deprecated:
     - 1.8.0-pre.1
@@ -901,7 +921,11 @@ m_ResolvedPackages:
     - 2.5.0
     - 2.5.1
     - 2.5.2
+    - 2.5.3
     - 3.0.0-pre.1
+    - 3.0.0-pre.2
+    - 3.0.0
+    - 3.0.1
     compatible:
     - 2.4.0
     - 2.4.1
@@ -909,7 +933,11 @@ m_ResolvedPackages:
     - 2.5.0
     - 2.5.1
     - 2.5.2
+    - 2.5.3
     - 3.0.0-pre.1
+    - 3.0.0-pre.2
+    - 3.0.0
+    - 3.0.1
     recommended: 2.4.3
     deprecated: []
   dependencies:
@@ -1219,6 +1247,7 @@ m_ResolvedPackages:
     - 3.2.3-pre.1
     - 3.2.3
     - 3.3.0
+    - 3.4.0
     - 4.0.0
     - 4.1.1
     - 4.1.2
@@ -3353,12 +3382,16 @@ m_ResolvedPackages:
     - 1.7.0
     - 1.8.0-pre.1
     - 1.8.0-pre.2
+    - 1.8.0
+    - 1.8.1
     compatible:
     - 1.6.1
     - 1.6.3
     - 1.7.0
     - 1.8.0-pre.1
     - 1.8.0-pre.2
+    - 1.8.0
+    - 1.8.1
     recommended: 1.6.3
     deprecated: []
   dependencies:
@@ -3746,12 +3779,14 @@ m_ResolvedPackages:
     - 3.0.25
     - 3.0.26
     - 3.0.27
+    - 3.0.28
     compatible:
     - 3.0.24
     - 3.0.25
     - 3.0.26
     - 3.0.27
-    recommended: 3.0.27
+    - 3.0.28
+    recommended: 3.0.28
     deprecated: []
   dependencies:
   - name: com.unity.ext.nunit

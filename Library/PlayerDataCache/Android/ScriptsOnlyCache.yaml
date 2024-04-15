@@ -1,9 +1,13 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AlignController
     - JsonReader
-    - SelectionController
-    - onGrabTransform
+    - TranscriptionController
+    - activeController
+    Meta.WitAi.dll:
+    - Meta.WitAi.CallbackHandlers.WitResponseMatcher
+    - Meta.WitAi.Data.Configuration.WitConfiguration
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
@@ -13,7 +17,6 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.XR.TrackedPoseDriver
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.RiderScriptEditorData
-    - Packages.Rider.Editor.RiderScriptEditorPersistedState
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
     - TMPro.TMP_FontAsset
@@ -61,7 +64,6 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.Interaction.Toolkit.XRRayInteractor
     Unity.XR.Management.Editor.dll:
     - UnityEditor.XR.Management.XRGeneralSettingsPerBuildTarget
-    - UnityEditor.XR.Management.XRManagerSettingsEditor
     Unity.XR.Management.dll:
     - UnityEngine.XR.Management.XRGeneralSettings
     - UnityEngine.XR.Management.XRManagerSettings
@@ -84,7 +86,35 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
+    VoiceSDK.Runtime.dll:
+    - Oculus.Voice.AppVoiceExperience
+    - Oculus.VoiceSDK.UX.VoiceActivationButton
+    - Oculus.VoiceSDK.UX.VoiceTranscriptionLabel
   serializedClasses:
+    Meta.WitAi:
+    - Meta.WitAi.CallbackHandlers.MultiValueEvent
+    - Meta.WitAi.CallbackHandlers.ValuePathMatcher
+    - Meta.WitAi.Configuration.WitEndpointConfig
+    - Meta.WitAi.Configuration.WitRuntimeConfiguration
+    - Meta.WitAi.Events.VoiceEvents
+    - Meta.WitAi.Events.VoiceServiceRequestEvent
+    - Meta.WitAi.Events.WitByteDataEvent
+    - Meta.WitAi.Events.WitErrorEvent
+    - Meta.WitAi.Events.WitMicLevelChangedEvent
+    - Meta.WitAi.Events.WitRequestCreatedEvent
+    - Meta.WitAi.Events.WitRequestOptionsEvent
+    - Meta.WitAi.Events.WitResponseEvent
+    - Meta.WitAi.Events.WitTranscriptionEvent
+    - Meta.WitAi.Events.WitValidationEvent
+    - Meta.WitAi.Utilities.StringEvent
+    Meta.WitAi.Lib:
+    - Meta.WitAi.Data.Info.WitAppInfo
+    - Meta.WitAi.Data.Info.WitEntityInfo
+    - Meta.WitAi.Data.Info.WitEntityKeywordInfo
+    - Meta.WitAi.Data.Info.WitEntityRoleInfo
+    - Meta.WitAi.Data.Info.WitIntentEntityInfo
+    - Meta.WitAi.Data.Info.WitIntentInfo
+    - Meta.WitAi.Data.Info.WitVoiceInfo
     Unity.InputSystem:
     - UnityEngine.InputSystem.InputAction
     - UnityEngine.InputSystem.InputActionMap
@@ -120,6 +150,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
     - UnityEngine.Events.PersistentListenerMode
+    - UnityEngine.Events.UnityEvent
     - UnityEngine.RectOffset
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
@@ -135,7 +166,46 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Navigation
     - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
-  methodsToPreserve: []
+  methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: activeController
+    methodName: ToggleActive
+  - assembly: Assembly-CSharp
+    fullTypeName: activeController
+    methodName: ToggleActive
+  - assembly: Assembly-CSharp
+    fullTypeName: AlignController
+    methodName: topAlign
+  - assembly: Assembly-CSharp
+    fullTypeName: activeController
+    methodName: ToggleActive
+  - assembly: Assembly-CSharp
+    fullTypeName: activeController
+    methodName: ToggleActive
+  - assembly: Assembly-CSharp
+    fullTypeName: activeController
+    methodName: ToggleActive
+  - assembly: Assembly-CSharp
+    fullTypeName: activeController
+    methodName: ToggleActive
+  - assembly: Assembly-CSharp
+    fullTypeName: AlignController
+    methodName: bottomAlign
+  - assembly: Assembly-CSharp
+    fullTypeName: AlignController
+    methodName: leftAlign
+  - assembly: Assembly-CSharp
+    fullTypeName: AlignController
+    methodName: rightAlign
+  - assembly: Assembly-CSharp
+    fullTypeName: activeController
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: activeController
+    methodName: ToggleActive
+  - assembly: Assembly-CSharp
+    fullTypeName: activeController
+    methodName: ToggleActive
   sceneClasses:
     Assets/Scenes/VRscene.unity:
     - Class: 1
@@ -173,107 +243,123 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16648}
+      Script: {instanceID: 16756}
     - Class: 114
-      Script: {instanceID: 16650}
+      Script: {instanceID: 16758}
     - Class: 114
-      Script: {instanceID: 16652}
+      Script: {instanceID: 16760}
     - Class: 114
-      Script: {instanceID: 16668}
+      Script: {instanceID: 16782}
     - Class: 114
-      Script: {instanceID: 16706}
+      Script: {instanceID: 16826}
     - Class: 114
-      Script: {instanceID: 16794}
+      Script: {instanceID: 16920}
     - Class: 114
-      Script: {instanceID: 16988}
+      Script: {instanceID: 17134}
     - Class: 114
-      Script: {instanceID: 17060}
+      Script: {instanceID: 17218}
     - Class: 114
-      Script: {instanceID: 17480}
+      Script: {instanceID: 17680}
     - Class: 114
-      Script: {instanceID: 17994}
+      Script: {instanceID: 18236}
     - Class: 114
-      Script: {instanceID: 18062}
+      Script: {instanceID: 18308}
     - Class: 114
-      Script: {instanceID: 18320}
+      Script: {instanceID: 18584}
     - Class: 114
-      Script: {instanceID: 18648}
+      Script: {instanceID: 18598}
     - Class: 114
-      Script: {instanceID: 18698}
+      Script: {instanceID: 18944}
     - Class: 114
-      Script: {instanceID: 18764}
+      Script: {instanceID: 19002}
     - Class: 114
-      Script: {instanceID: 18934}
+      Script: {instanceID: 19074}
     - Class: 114
-      Script: {instanceID: 19000}
+      Script: {instanceID: 19274}
     - Class: 114
-      Script: {instanceID: 19110}
+      Script: {instanceID: 19346}
     - Class: 114
-      Script: {instanceID: 19174}
+      Script: {instanceID: 19470}
     - Class: 114
-      Script: {instanceID: 19382}
+      Script: {instanceID: 19548}
     - Class: 114
-      Script: {instanceID: 19528}
+      Script: {instanceID: 19766}
     - Class: 114
-      Script: {instanceID: 19534}
+      Script: {instanceID: 19810}
     - Class: 114
-      Script: {instanceID: 19618}
+      Script: {instanceID: 19928}
     - Class: 114
-      Script: {instanceID: 19650}
+      Script: {instanceID: 19934}
     - Class: 114
-      Script: {instanceID: 19720}
-    - Class: 114
-      Script: {instanceID: 20040}
+      Script: {instanceID: 20024}
     - Class: 114
       Script: {instanceID: 20066}
     - Class: 114
-      Script: {instanceID: 20372}
+      Script: {instanceID: 20144}
     - Class: 114
-      Script: {instanceID: 20778}
+      Script: {instanceID: 20368}
     - Class: 114
-      Script: {instanceID: 20888}
+      Script: {instanceID: 20504}
     - Class: 114
-      Script: {instanceID: 21036}
+      Script: {instanceID: 20532}
     - Class: 114
-      Script: {instanceID: 21230}
+      Script: {instanceID: 20824}
     - Class: 114
-      Script: {instanceID: 21238}
+      Script: {instanceID: 20828}
     - Class: 114
-      Script: {instanceID: 21318}
+      Script: {instanceID: 20862}
     - Class: 114
-      Script: {instanceID: 21506}
+      Script: {instanceID: 21324}
     - Class: 114
-      Script: {instanceID: 21654}
+      Script: {instanceID: 21438}
     - Class: 114
-      Script: {instanceID: 21908}
+      Script: {instanceID: 21816}
     - Class: 114
-      Script: {instanceID: 22124}
+      Script: {instanceID: 21822}
     - Class: 114
-      Script: {instanceID: 22290}
+      Script: {instanceID: 21910}
     - Class: 114
-      Script: {instanceID: 22342}
+      Script: {instanceID: 22140}
     - Class: 114
-      Script: {instanceID: 22584}
+      Script: {instanceID: 22304}
     - Class: 114
-      Script: {instanceID: 22866}
+      Script: {instanceID: 22456}
     - Class: 114
-      Script: {instanceID: 23148}
+      Script: {instanceID: 22600}
     - Class: 114
-      Script: {instanceID: 23216}
+      Script: {instanceID: 22840}
     - Class: 114
-      Script: {instanceID: 23444}
+      Script: {instanceID: 23016}
     - Class: 114
-      Script: {instanceID: 23446}
+      Script: {instanceID: 23070}
     - Class: 114
-      Script: {instanceID: 23732}
+      Script: {instanceID: 23350}
     - Class: 114
-      Script: {instanceID: 24388}
+      Script: {instanceID: 23662}
     - Class: 114
-      Script: {instanceID: 24490}
+      Script: {instanceID: 23978}
     - Class: 114
-      Script: {instanceID: 24676}
+      Script: {instanceID: 24060}
     - Class: 114
-      Script: {instanceID: 24820}
+      Script: {instanceID: 24314}
+    - Class: 114
+      Script: {instanceID: 24316}
+    - Class: 114
+      Script: {instanceID: 24804}
+    - Class: 114
+      Script: {instanceID: 24926}
+    - Class: 114
+      Script: {instanceID: 25364}
+    - Class: 114
+      Script: {instanceID: 25496}
+    - Class: 114
+      Script: {instanceID: 25698}
+    - Class: 114
+      Script: {instanceID: 25854}
+    - Class: 114
+      Script: {instanceID: 29904}
+    - Class: 114
+      Script: {instanceID: 29906}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -397,6 +483,18 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: a2044bb405c3e99ae6af77fa371be401
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.Utilities
+    className: FloatToStringEvent
+  - hash:
+      serializedVersion: 2
+      Hash: 661432b01e3564e0f9059b1443d6aa98
+    assemblyName: Meta.WitAi.TTS
+    namespaceName: Meta.WitAi.TTS.Integrations
+    className: TTSDiskCache
+  - hash:
+      serializedVersion: 2
       Hash: b2585c2ffe814daaf637d190c0a326e1
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.HID.Editor
@@ -451,10 +549,22 @@ ScriptsOnlyBuild:
     className: LazyFollow
   - hash:
       serializedVersion: 2
+      Hash: fea1e47caaa5d3b152630d17c0b55cee
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.Data.Entities
+    className: WitDynamicEntitiesData
+  - hash:
+      serializedVersion: 2
       Hash: 241f8f2a38d4d795b79ef1cef3dfca4f
     assemblyName: Unity.XR.Interaction.Toolkit
     namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Theme.Primitives
     className: Vector2AffordanceThemeDatum
+  - hash:
+      serializedVersion: 2
+      Hash: 8dee47bcdd50d406dfbde5bcc5cc8a84
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.ServiceReferences
+    className: VoiceServiceAudioEventReference
   - hash:
       serializedVersion: 2
       Hash: 14baa8ec4b80d85b681df8c4b109b166
@@ -535,6 +645,12 @@ ScriptsOnlyBuild:
     className: AudioAffordanceThemeDatum
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.ServiceReferences
+    className: CombinedAudioEventReference
+  - hash:
+      serializedVersion: 2
       Hash: fa0bf252ff7c0f032167ed1945746a8b
     assemblyName: Unity.XR.Interaction.Toolkit
     namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.UI
@@ -571,10 +687,22 @@ ScriptsOnlyBuild:
     className: FloatMaterialPropertyAffordanceReceiver
   - hash:
       serializedVersion: 2
+      Hash: f6f47cd0e3dfc40fb35c06de006c430f
+    assemblyName: Meta.WitAi.Lib
+    namespaceName: Meta.Voice.Audio
+    className: UnityAudioSystem
+  - hash:
+      serializedVersion: 2
       Hash: 922f8abc26545bdd947635ae36883c7a
     assemblyName: Unity.XR.Interaction.Toolkit.Samples.StarterAssets
     namespaceName: UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
     className: DynamicMoveProvider
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.Data.Entities
+    className: DynamicEntityKeywordRegistry
   - hash:
       serializedVersion: 2
       Hash: bcdedb1b3a567eb05111be4716618ce1
@@ -613,10 +741,10 @@ ScriptsOnlyBuild:
     className: UnityMessageListener
   - hash:
       serializedVersion: 2
-      Hash: c776869f36dc7fce754b4c188effa5c1
-    assemblyName: Parabox.CSG.Demo
-    namespaceName: Parabox.CSG.Demo
-    className: CameraControls
+      Hash: 386822c6eafb0bec55e1d63029fc5174
+    assemblyName: Meta.WitAi.TTS
+    namespaceName: Meta.WitAi.TTS.LipSync
+    className: VisemeBlendShapeLipSync
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -641,6 +769,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: f70247b282ad75fdfcc5bd1f7d7c7ea4
+    assemblyName: VoiceSDK.Runtime
+    namespaceName: Oculus.VoiceSDK.UX
+    className: VoiceTranscriptionLabel
+  - hash:
+      serializedVersion: 2
+      Hash: 941d60d981bda97fc165bf4a3abb8d52
+    assemblyName: Meta.WitAi.TTS
+    namespaceName: Meta.WitAi.TTS.Integrations
+    className: TTSWit
   - hash:
       serializedVersion: 2
       Hash: 34fa63a30926bcf55d7323dae76be890
@@ -709,6 +849,12 @@ ScriptsOnlyBuild:
     className: OnScreenButton
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Meta.Voice.Samples.Shapes
+    namespaceName: Meta.Voice.Samples.Shapes
+    className: ColorChanger
+  - hash:
+      serializedVersion: 2
       Hash: ed3c495f7ee319b0e4ce474b2bb98007
     assemblyName: Unity.XR.Interaction.Toolkit
     namespaceName: UnityEngine.XR.Interaction.Toolkit
@@ -733,6 +879,12 @@ ScriptsOnlyBuild:
     className: PokeThresholdDatum
   - hash:
       serializedVersion: 2
+      Hash: 4ede72de7b91014ebeb4f52a93d04aa7
+    assemblyName: Meta.WitAi.TTS
+    namespaceName: Meta.WitAi.TTS.UX
+    className: TTSSpeakerStatusLabel
+  - hash:
+      serializedVersion: 2
       Hash: ed89f435219b86ca78ac733974140c03
     assemblyName: Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator
     namespaceName: UnityEngine.XR.Interaction.Toolkit.Samples.DeviceSimulator
@@ -749,6 +901,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseDownMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 87e006dbfe2b7163e243819196132c42
+    assemblyName: Meta.WitAi.TTS
+    namespaceName: Meta.WitAi.TTS.Utilities
+    className: TTSSpeechSplitter
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -883,6 +1041,12 @@ ScriptsOnlyBuild:
     className: XRGazeInteractor
   - hash:
       serializedVersion: 2
+      Hash: 5d0e77ba1c428196eea9663bddb6f2b5
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TranscriptionController
+  - hash:
+      serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
     assemblyName: Unity.VisualScripting.Flow
     namespaceName: Unity.VisualScripting
@@ -907,6 +1071,12 @@ ScriptsOnlyBuild:
     className: InputActionAsset
   - hash:
       serializedVersion: 2
+      Hash: 97a72b06646fb55bd843ad40c7aa9c6c
+    assemblyName: Meta.WitAi.TTS
+    namespaceName: Meta.WitAi.TTS.UX
+    className: TTSSpeakerInput
+  - hash:
+      serializedVersion: 2
       Hash: 0286ed84936a6e3c4dba049ae21a7b1c
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -923,6 +1093,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.CoreUtils
     namespaceName: Unity.XR.CoreUtils
     className: XROrigin
+  - hash:
+      serializedVersion: 2
+      Hash: b462443aefa83e65e58f740542d72072
+    assemblyName: Meta.VoiceSDK.Mic.Other
+    namespaceName: Meta.WitAi.Lib
+    className: Mic
   - hash:
       serializedVersion: 2
       Hash: de6512d8b204c9dab111f5a79849c437
@@ -985,6 +1161,12 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
+      Hash: df2e60b80a546f045793e25c01c77db7
+    assemblyName: VoiceSDK.Runtime
+    namespaceName: Oculus.Voice
+    className: AppVoiceExperience
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1039,16 +1221,46 @@ ScriptsOnlyBuild:
     className: DeviceBasedContinuousMoveProvider
   - hash:
       serializedVersion: 2
+      Hash: 6c6f848fa58de1cafd2d5dda2fd59fdd
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.Data.Entities
+    className: WitSimpleDynamicEntity
+  - hash:
+      serializedVersion: 2
       Hash: 6298a10412e94e11ad85ac6148c9dda1
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: f8c762fe6843e7b1ae85583826d7a10f
+    assemblyName: Meta.Voice.Samples.Shapes
+    namespaceName: Meta.Voice.Samples.Shapes
+    className: ParallelTextActivator
+  - hash:
+      serializedVersion: 2
       Hash: d2cdc988562557524570d164f7c0abfa
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.OnScreen
     className: OnScreenStick
+  - hash:
+      serializedVersion: 2
+      Hash: abfe4db15df256f84260e379615d910f
+    assemblyName: Meta.VoiceSDK.Mic.Common
+    namespaceName: Meta.WitAi.Lib
+    className: MicDebug
+  - hash:
+      serializedVersion: 2
+      Hash: cfe93cc08d27c4f6b39a321eea67de03
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AlignController
+  - hash:
+      serializedVersion: 2
+      Hash: af9f2f2bc7bdc284b07fcce1bd800232
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.Data.Configuration
+    className: WitConfiguration
   - hash:
       serializedVersion: 2
       Hash: fcc569162a8d9bd9df34e8c9dee84212
@@ -1061,6 +1273,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnCancelMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: c8ff63776e292d1a1315849c38d3ba6a
+    assemblyName: AssistantVoiceCommandCommon
+    namespaceName: Oculus.Assistant.VoiceCommand.Configuration
+    className: VoiceCommand
+  - hash:
+      serializedVersion: 2
+      Hash: d2c3fd63c2e83a6e577b3ee3c45de5e2
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.Data.Entities
+    className: RegisteredDynamicEntityKeyword
   - hash:
       serializedVersion: 2
       Hash: 440a5aaa10af4960b299f36ab6d903e5
@@ -1079,6 +1303,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerClickMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 94bb673376490b1f23b25676572654a8
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.Events.UnityEventListeners
+    className: TranscriptionEventListener
   - hash:
       serializedVersion: 2
       Hash: 4f4232c50a564bef3621d1206d39f426
@@ -1141,16 +1371,22 @@ ScriptsOnlyBuild:
     className: XRUIInputModule
   - hash:
       serializedVersion: 2
-      Hash: f9d348258e49211579237595c7d91a39
-    assemblyName: Unity.XR.Interaction.Toolkit
-    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Theme.Primitives
-    className: Vector3AffordanceThemeDatum
+      Hash: 7aa6a29f5fbc296411e48d31cf0ee539
+    assemblyName: Meta.WitAi.TTS
+    namespaceName: Meta.WitAi.TTS.UX
+    className: TTSSpeakerObserver
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnEndDragMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: f9d348258e49211579237595c7d91a39
+    assemblyName: Unity.XR.Interaction.Toolkit
+    namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Theme.Primitives
+    className: Vector3AffordanceThemeDatum
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1177,16 +1413,16 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 1f5826ded06c8804972f2fe785a38367
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.Lib
+    className: VoiceLipSyncMic
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.UI
     className: BaseInputOverride
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: SelectionController
   - hash:
       serializedVersion: 2
       Hash: 6237f92becd6162fa105361ab9ce2a00
@@ -1261,10 +1497,40 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: 7c0259207b250709315b1f3fad5b62e1
+    assemblyName: Meta.WitAi
+    namespaceName: 
+    className: AudioClipAudioSource
+  - hash:
+      serializedVersion: 2
       Hash: d204a365c3936c9ff389ed1ce73d9bfc
     assemblyName: Unity.XR.Interaction.Toolkit
     namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Rendering
     className: Vector2MaterialPropertyAffordanceReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 785a2641e5435567c5b75cecd2f05672
+    assemblyName: Meta.WitAi.TTS
+    namespaceName: Meta.WitAi.TTS.Utilities
+    className: TTSSpeaker
+  - hash:
+      serializedVersion: 2
+      Hash: 9674d1fd10ce15c2ca63a3428e3f1219
+    assemblyName: Meta.Voice.Samples.Shapes
+    namespaceName: Meta.Voice.Samples.Shapes
+    className: ShapeSampleInstructions
+  - hash:
+      serializedVersion: 2
+      Hash: 1aa709b2840c7418bc10e4b1025ebbad
+    assemblyName: Meta.WitAi.Lib
+    namespaceName: Meta.Voice.Audio
+    className: UnityAudioPlayer
+  - hash:
+      serializedVersion: 2
+      Hash: fea1e47caaa5d3b152630d17c0b55cee
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.Data.Entities
+    className: DynamicEntityProvider
   - hash:
       serializedVersion: 2
       Hash: 304e5876521a5fc876aba0cb79927000
@@ -1315,6 +1581,12 @@ ScriptsOnlyBuild:
     className: AudioAffordanceReceiver
   - hash:
       serializedVersion: 2
+      Hash: a906794a29b9640b0f0563bf7f1003bf
+    assemblyName: VoiceSDK.Runtime
+    namespaceName: Oculus.VoiceSDK.UX
+    className: VoiceActivationButton
+  - hash:
+      serializedVersion: 2
       Hash: 074f6020596fd2762ecdb32cf7a6ec19
     assemblyName: Unity.XR.Interaction.Toolkit
     namespaceName: UnityEngine.XR.Interaction.Toolkit
@@ -1343,6 +1615,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.Interaction.Toolkit
     namespaceName: UnityEngine.XR.Interaction.Toolkit.Inputs
     className: InputActionManager
+  - hash:
+      serializedVersion: 2
+      Hash: a57dbb8050fcf76043736e23955f0af2
+    assemblyName: Meta.WitAi.TTS
+    namespaceName: Meta.WitAi.TTS.LipSync
+    className: VisemeTextureFlipLipSync
   - hash:
       serializedVersion: 2
       Hash: de8bb7abfdb9d35ef3758be4cfc21a76
@@ -1429,6 +1707,12 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerStay2DMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 4bfaee1ffae86aad55c41ed90fa570c1
+    assemblyName: Meta.WitAi.TTS
+    namespaceName: Meta.WitAi.TTS.Integrations
+    className: TTSRuntimeCache
+  - hash:
+      serializedVersion: 2
       Hash: 751d867553f413cde86fe5db0b02780d
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
@@ -1453,10 +1737,22 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
+      Hash: f059913217272ea4d409152693512332
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.Data
+    className: WitStringValue
+  - hash:
+      serializedVersion: 2
       Hash: a03cf6f60c605d858f83449f4b4fc400
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: 5a722695b12bfcbb5ecd7f68abcd094d
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.Data
+    className: AudioBuffer
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1487,6 +1783,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 7d9e071b45e81ea70ee5c9aa9bab6bd7
+    assemblyName: VoiceSDK.Runtime
+    namespaceName: Oculus.Voice
+    className: ObjectVoiceExperience
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1525,6 +1827,12 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
+      Hash: f059913217272ea4d409152693512332
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.Data
+    className: WitIntValue
+  - hash:
+      serializedVersion: 2
       Hash: 200207f2d5ea252502206e81ef4215b1
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem
@@ -1561,6 +1869,12 @@ ScriptsOnlyBuild:
     className: XRSingleGrabFreeTransformer
   - hash:
       serializedVersion: 2
+      Hash: 44e4972649cee9a9818f4534258d3bb1
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.CallbackHandlers
+    className: WitUtteranceMatcher
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.XR.Oculus
     namespaceName: Unity.XR.Oculus
@@ -1573,10 +1887,22 @@ ScriptsOnlyBuild:
     className: XRControllerRecording
   - hash:
       serializedVersion: 2
+      Hash: c0c4e3e2592b8965be68e2d0f2b6b7b2
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.Data.Entities
+    className: DynamicEntityDataProvider
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnCollisionExitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: e3d8b7328a28ec0e150b7ba7cddefe01
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.Utilities
+    className: StringToStringEvent
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1585,10 +1911,22 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerEnter2DMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 26da9a46a23fe5f52b354b0faee6f5df
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.Data
+    className: WitFloatValue
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: BasicPlayableBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: a5b17d1f58b71ca63d817ea1f953f191
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi
+    className: Wit
   - hash:
       serializedVersion: 2
       Hash: 34096a327d779b7c96a3e390f3559143
@@ -1687,10 +2025,10 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: onGrabTransform
+      Hash: 17edc1497771ba259ae5cee8513b790e
+    assemblyName: Meta.WitAi.TTS
+    namespaceName: Meta.WitAi.TTS.UX
+    className: TTSSpeakerErrorLabel
   - hash:
       serializedVersion: 2
       Hash: be140ea01a11255b651c097661ac55b1
@@ -1705,16 +2043,34 @@ ScriptsOnlyBuild:
     className: QuaternionEulerAffordanceReceiver
   - hash:
       serializedVersion: 2
+      Hash: b5a3d647574df6b300903b753f55d3cb
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: activeController
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 39e9a8bc7a64169371480085c972eab0
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.CallbackHandlers
+    className: SimpleIntentHandler
+  - hash:
+      serializedVersion: 2
       Hash: 7f7e136731a35f3142b6b2c9d0be5dd6
     assemblyName: Unity.XR.CoreUtils
     namespaceName: Unity.XR.CoreUtils.Datums
     className: AnimationCurveDatum
+  - hash:
+      serializedVersion: 2
+      Hash: 736806d0cf0805d509ad7e9983adc894
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.CallbackHandlers
+    className: WitResponseMatcher
   - hash:
       serializedVersion: 2
       Hash: 1b5650135291b120fb6b46f6e6eea382
@@ -1753,6 +2109,12 @@ ScriptsOnlyBuild:
     className: UniformTransformScaleAffordanceReceiver
   - hash:
       serializedVersion: 2
+      Hash: 8f2fc970a551578b4457984f354c5d38
+    assemblyName: Meta.Voice.Samples.WitResponseDebugger
+    namespaceName: Meta.Voice.Samples.WitResponseDebugger
+    className: WitUIInteractionHandler
+  - hash:
+      serializedVersion: 2
       Hash: 826d70cde3b432cc20561321ec0e2fb3
     assemblyName: UnityEngine.XR.LegacyInputHelpers
     namespaceName: UnityEngine.XR.LegacyInputHelpers
@@ -1784,9 +2146,21 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi
+    className: WitService
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseOverMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 7b95a47c64000c0c3b8ffce5f5a94a3a
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.CallbackHandlers
+    className: OutOfScopeUtteranceHandler
   - hash:
       serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
@@ -1805,6 +2179,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.Interaction.Toolkit
     namespaceName: UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation
     className: XRDeviceSimulator
+  - hash:
+      serializedVersion: 2
+      Hash: 3710ddc0c0e0846bb9160d58984f2e96
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.CallbackHandlers
+    className: SimpleStringEntityHandler
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1831,6 +2211,18 @@ ScriptsOnlyBuild:
     className: TrackedDeviceGraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 8ee4562593f7644b73119337bd5390fe
+    assemblyName: Meta.WitAi.TTS
+    namespaceName: Meta.WitAi.TTS.LipSync
+    className: VisemeLipSyncAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: a04485bf9a065574070cf8098e2ddd7f
+    assemblyName: VoiceSDK.Runtime
+    namespaceName: Oculus.Voice.UX
+    className: HierarchySimplifier
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.XR.Interaction.Toolkit
     namespaceName: UnityEngine.XR.Interaction.Toolkit.Utilities
@@ -1855,16 +2247,28 @@ ScriptsOnlyBuild:
     className: GrabMoveProvider
   - hash:
       serializedVersion: 2
-      Hash: a44c93570c76c1b80e0d85a2275e96a7
-    assemblyName: Parabox.CSG.Demo
-    namespaceName: Parabox.CSG.Demo
-    className: Demo
+      Hash: 19c4584f33126ff26eb6f8b4ec3075d1
+    assemblyName: VoiceSDK.Runtime
+    namespaceName: Oculus.Voice.Logging
+    className: TTSServiceLogging
+  - hash:
+      serializedVersion: 2
+      Hash: 4b7fd04996b234ef61ed133f2ad3daee
+    assemblyName: Meta.Voice.Samples.WitShapes
+    namespaceName: Meta.Voice.Samples.WitShapes
+    className: WitUIInteractionHandler
   - hash:
       serializedVersion: 2
       Hash: afe1800287c9574079eab3fea2622416
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Meta.Voice.Samples.WitShapes
+    namespaceName: Meta.Voice.Samples.WitShapes
+    className: ColorChanger
   - hash:
       serializedVersion: 2
       Hash: e5bb651a220b8d33d98eec4737960b6a
@@ -1877,6 +2281,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.Interaction.Toolkit
     namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Rendering
     className: Vector4MaterialPropertyAffordanceReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 2756774a93ce551a301e9181d3bbc9b6
+    assemblyName: Meta.WitAi.TTS
+    namespaceName: Meta.WitAi.TTS.Utilities
+    className: TTSSpeakerAutoLoader
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1897,6 +2307,12 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
+      Hash: 73de9dc3605a22b129fd71fea0c692c8
+    assemblyName: Meta.WitAi
+    namespaceName: Meta.WitAi.Events.UnityEventListeners
+    className: AudioEventListener
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1910,4 +2326,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/VRscene.unity
-  playerPath: /Users/haochen/Documents/Unity/hierarchy/215.apk
+  playerPath: /Users/haochen/Documents/Unity/hierarchy/408.apk

@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "co.parabox.csg": {
-      "version": "https://github.com/karl-/pb_CSG.git",
+    "com.meta.xr.sdk.voice": {
+      "version": "63.0.0",
       "depth": 0,
-      "source": "git",
+      "source": "registry",
       "dependencies": {},
-      "hash": "9b35e1c90ee2d3fe1b7b881a25242f47e975d94b"
+      "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
       "version": "2.2.0",
