@@ -166,6 +166,8 @@ MonoBehaviour:
   - {fileID: 515439740}
   - {fileID: 1897235078}
   - {fileID: 1921208155}
+  - {fileID: 1429151889}
+  subtract: {fileID: 0}
 --- !u!114 &1783794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1194,7 +1196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d0bfd24b182d4826aa707e74399c7d6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d0bfd24b182d4826aa707e74399c7d6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1645,6 +1647,8 @@ MonoBehaviour:
   - {fileID: 1783792}
   - {fileID: 1897235078}
   - {fileID: 1921208155}
+  - {fileID: 1429151889}
+  subtract: {fileID: 0}
 --- !u!1 &696665808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 781630661673262138, guid: c24a7635b5761984d81cf6c4aac26e0d, type: 3}
@@ -1848,7 +1852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _voiceService: {fileID: 1877494941}
   _activateText: Activate
-  _activateImmediately: 1
+  _activateImmediately: 0
   _deactivateText: Deactivate
   _deactivateAndAbort: 0
 --- !u!114 &782433357
@@ -1867,7 +1871,7 @@ MonoBehaviour:
   rightVoiceActivateInput: {fileID: -133040265685200670, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   _voiceService: {fileID: 1877494941}
   _activateText: Activate
-  _activateImmediately: 0
+  _activateImmediately: 1
   _deactivateText: Deactivate
   _deactivateAndAbort: 0
 --- !u!1001 &910062631
@@ -1938,6 +1942,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3886807847816620159, guid: 046e3eac2d78649e1a7fec246b752a26, type: 3}
+      propertyPath: m_Name
+      value: subtract_cylinder_black
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 046e3eac2d78649e1a7fec246b752a26, type: 3}
       propertyPath: m_Name
       value: subtract cylinder black
@@ -1987,6 +1995,7 @@ MonoBehaviour:
   - {fileID: 515439740}
   - {fileID: 1897235078}
   - {fileID: 1921208155}
+  subtract: {fileID: 1429151889}
 --- !u!1001 &954605891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2136,6 +2145,8 @@ MonoBehaviour:
   - {fileID: 1783792}
   - {fileID: 1897235078}
   - {fileID: 1921208155}
+  - {fileID: 1429151889}
+  subtract: {fileID: 0}
 --- !u!1001 &1052718245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3027,6 +3038,7 @@ MonoBehaviour:
   cube: {fileID: 0}
   cylinder: {fileID: 0}
   resetList: []
+  subtract: {fileID: 0}
 --- !u!4 &1296071594 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9014170783728641054, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
@@ -3407,6 +3419,126 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3ad7286fea5a46f2bfdc0a24f04c56f, type: 3}
+--- !u!1 &1356839559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1356839564}
+  - component: {fileID: 1356839563}
+  - component: {fileID: 1356839562}
+  - component: {fileID: 1356839561}
+  - component: {fileID: 1356839560}
+  m_Layer: 0
+  m_Name: Indicator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1356839560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356839559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c33206b6d655472ea485d58963b820a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cube: {fileID: 1897235085}
+  cylinder: {fileID: 1921208162}
+--- !u!65 &1356839561
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356839559}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1356839562
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356839559}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1356839563
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356839559}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1356839564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356839559}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.172, y: 1.836, z: 0.749}
+  m_LocalScale: {x: 0.6, y: 0.2, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1384498638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3616,6 +3748,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1429151889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1d0bfd24b182d4826aa707e74399c7d6, type: 3}
+  m_PrefabInstance: {fileID: 153354684}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1430530309 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 781630662526433602, guid: c24a7635b5761984d81cf6c4aac26e0d, type: 3}
@@ -5063,7 +5200,9 @@ GameObject:
   - component: {fileID: 1877494939}
   - component: {fileID: 1877494941}
   - component: {fileID: 1877494942}
-  - component: {fileID: 1877494944}
+  - component: {fileID: 1877494945}
+  - component: {fileID: 1877494947}
+  - component: {fileID: 1877494948}
   m_Layer: 0
   m_Name: VoiceHandler
   m_TagString: Untagged
@@ -5218,7 +5357,7 @@ MonoBehaviour:
     contentRequired: 1
     matchMethod: 0
     comparisonMethod: 0
-    matchValue: 
+    matchValue: union
     floatingPointComparisonTolerance: 0.00009999999747378752
     allowConfidenceOverlap: 0
     confidenceRanges: []
@@ -5244,7 +5383,7 @@ MonoBehaviour:
   onOutOfDomain:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1877494944
+--- !u!114 &1877494945
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5261,7 +5400,103 @@ MonoBehaviour:
   intent: intersect
   confidenceThreshold: 0.6
   valueMatchers:
-  - path: entities.intersect:intersect[0].id
+  - path: entities.intersect:intersect[0].type
+    witValueReference: {fileID: 0}
+    contentRequired: 1
+    matchMethod: 0
+    comparisonMethod: 0
+    matchValue: intersect
+    floatingPointComparisonTolerance: 0.00009999999747378752
+    allowConfidenceOverlap: 0
+    confidenceRanges: []
+  formattedValueEvents: []
+  onMultiValueEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 954605893}
+        m_TargetAssemblyTypeName: activeController, Assembly-CSharp
+        m_MethodName: ToggleActive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDidNotMatch:
+    m_PersistentCalls:
+      m_Calls: []
+  onOutOfDomain:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1877494947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877494937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591c3d6f017c11b4faa41506d75635b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Voice: {fileID: 1877494941}
+  ValidateEarly: 0
+  intent: exclude
+  confidenceThreshold: 0.303
+  valueMatchers:
+  - path: entities.exclude:exclude[0].name
+    witValueReference: {fileID: 0}
+    contentRequired: 1
+    matchMethod: 0
+    comparisonMethod: 0
+    matchValue: exclude
+    floatingPointComparisonTolerance: 0.00009999999747378752
+    allowConfidenceOverlap: 0
+    confidenceRanges: []
+  formattedValueEvents: []
+  onMultiValueEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 515439741}
+        m_TargetAssemblyTypeName: activeController, Assembly-CSharp
+        m_MethodName: ToggleActive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDidNotMatch:
+    m_PersistentCalls:
+      m_Calls: []
+  onOutOfDomain:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1877494948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877494937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591c3d6f017c11b4faa41506d75635b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Voice: {fileID: 1877494941}
+  ValidateEarly: 0
+  intent: minus
+  confidenceThreshold: 0.229
+  valueMatchers:
+  - path: entities.minus:minus[0].start
     witValueReference: {fileID: 0}
     contentRequired: 1
     matchMethod: 0
@@ -5274,9 +5509,9 @@ MonoBehaviour:
   onMultiValueEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954605893}
+      - m_Target: {fileID: 910062633}
         m_TargetAssemblyTypeName: activeController, Assembly-CSharp
-        m_MethodName: ToggleActive
+        m_MethodName: subtractHandler
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5603,6 +5838,7 @@ MonoBehaviour:
   - {fileID: 954605892}
   - {fileID: 515439740}
   - {fileID: 910062632}
+  subtract: {fileID: 0}
 --- !u!1 &1921208155
 GameObject:
   m_ObjectHideFlags: 0
@@ -5933,6 +6169,7 @@ MonoBehaviour:
   cube: {fileID: 0}
   cylinder: {fileID: 0}
   resetList: []
+  subtract: {fileID: 0}
 --- !u!1 &1994080615 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5289182684458692540, guid: e5db301629853dd4a99835fa70099d79, type: 3}
@@ -6112,7 +6349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5289182684458692542, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleActive
+      value: subtractHandler
       objectReference: {fileID: 0}
     - target: {fileID: 5289182684458692542, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName

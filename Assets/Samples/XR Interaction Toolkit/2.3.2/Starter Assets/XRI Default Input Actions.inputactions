@@ -796,7 +796,7 @@
                 },
                 {
                     "name": "",
-                    "id": "dda7d482-ec21-42b5-a955-d3560db96c4f",
+                    "id": "54409093-2d32-4c7b-82b2-77d314118c8c",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
@@ -1507,17 +1507,6 @@
                     "processors": "ScaleVector2(x=0),StickDeadzone",
                     "groups": "Generic XR Controller",
                     "action": "Translate Anchor",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "19672d3c-5832-4e95-a4ca-9626e5d7f745",
-                    "path": "<XRController>{RightHand}/primaryButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Voice Activate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

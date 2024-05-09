@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - JsonReader
     - TranscriptionController
     - activeController
+    - colorController
     Meta.WitAi.dll:
     - Meta.WitAi.CallbackHandlers.WitResponseMatcher
     - Meta.WitAi.Data.Configuration.WitConfiguration
@@ -17,6 +18,7 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.XR.TrackedPoseDriver
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.RiderScriptEditorData
+    - Packages.Rider.Editor.RiderScriptEditorPersistedState
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
     - TMPro.TMP_FontAsset
@@ -86,6 +88,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
+    VoiceSDK.Editor.dll:
+    - Oculus.Voice.Windows.UnderstandingViewerWindow
     VoiceSDK.Runtime.dll:
     - Oculus.Voice.AppVoiceExperience
     - Oculus.VoiceSDK.UX.VoiceActivationButton
@@ -174,6 +178,12 @@ ScriptsOnlyBuild:
     fullTypeName: activeController
     methodName: ToggleActive
   - assembly: Assembly-CSharp
+    fullTypeName: activeController
+    methodName: ToggleActive
+  - assembly: Assembly-CSharp
+    fullTypeName: AlignController
+    methodName: rightAlign
+  - assembly: Assembly-CSharp
     fullTypeName: AlignController
     methodName: topAlign
   - assembly: Assembly-CSharp
@@ -184,10 +194,10 @@ ScriptsOnlyBuild:
     methodName: ToggleActive
   - assembly: Assembly-CSharp
     fullTypeName: activeController
-    methodName: ToggleActive
+    methodName: subtractHandler
   - assembly: Assembly-CSharp
     fullTypeName: activeController
-    methodName: ToggleActive
+    methodName: Reset
   - assembly: Assembly-CSharp
     fullTypeName: AlignController
     methodName: bottomAlign
@@ -195,17 +205,17 @@ ScriptsOnlyBuild:
     fullTypeName: AlignController
     methodName: leftAlign
   - assembly: Assembly-CSharp
-    fullTypeName: AlignController
-    methodName: rightAlign
-  - assembly: Assembly-CSharp
-    fullTypeName: activeController
-    methodName: Reset
-  - assembly: Assembly-CSharp
     fullTypeName: activeController
     methodName: ToggleActive
   - assembly: Assembly-CSharp
     fullTypeName: activeController
     methodName: ToggleActive
+  - assembly: Assembly-CSharp
+    fullTypeName: activeController
+    methodName: ToggleActive
+  - assembly: Assembly-CSharp
+    fullTypeName: activeController
+    methodName: subtractHandler
   sceneClasses:
     Assets/Scenes/VRscene.unity:
     - Class: 1
@@ -313,53 +323,55 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 21438}
     - Class: 114
-      Script: {instanceID: 21816}
+      Script: {instanceID: 21506}
     - Class: 114
-      Script: {instanceID: 21822}
+      Script: {instanceID: 21818}
     - Class: 114
-      Script: {instanceID: 21910}
+      Script: {instanceID: 21824}
     - Class: 114
-      Script: {instanceID: 22140}
+      Script: {instanceID: 21912}
     - Class: 114
-      Script: {instanceID: 22304}
+      Script: {instanceID: 22142}
     - Class: 114
-      Script: {instanceID: 22456}
+      Script: {instanceID: 22306}
     - Class: 114
-      Script: {instanceID: 22600}
+      Script: {instanceID: 22458}
     - Class: 114
-      Script: {instanceID: 22840}
+      Script: {instanceID: 22602}
     - Class: 114
-      Script: {instanceID: 23016}
+      Script: {instanceID: 22842}
     - Class: 114
-      Script: {instanceID: 23070}
+      Script: {instanceID: 23018}
     - Class: 114
-      Script: {instanceID: 23350}
+      Script: {instanceID: 23072}
     - Class: 114
-      Script: {instanceID: 23662}
+      Script: {instanceID: 23352}
     - Class: 114
-      Script: {instanceID: 23978}
+      Script: {instanceID: 23664}
     - Class: 114
-      Script: {instanceID: 24060}
+      Script: {instanceID: 23980}
     - Class: 114
-      Script: {instanceID: 24314}
+      Script: {instanceID: 24062}
     - Class: 114
       Script: {instanceID: 24316}
     - Class: 114
-      Script: {instanceID: 24804}
+      Script: {instanceID: 24318}
     - Class: 114
-      Script: {instanceID: 24926}
+      Script: {instanceID: 24806}
     - Class: 114
-      Script: {instanceID: 25364}
+      Script: {instanceID: 24928}
     - Class: 114
-      Script: {instanceID: 25496}
+      Script: {instanceID: 25366}
     - Class: 114
-      Script: {instanceID: 25698}
+      Script: {instanceID: 25498}
     - Class: 114
-      Script: {instanceID: 25854}
+      Script: {instanceID: 25700}
     - Class: 114
-      Script: {instanceID: 29904}
+      Script: {instanceID: 25856}
     - Class: 114
-      Script: {instanceID: 29906}
+      Script: {instanceID: 45796}
+    - Class: 114
+      Script: {instanceID: 45798}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1383,6 +1395,12 @@ ScriptsOnlyBuild:
     className: UnityOnEndDragMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 8cb18506aeec54ed3803abd96b1d3515
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: colorController
+  - hash:
+      serializedVersion: 2
       Hash: f9d348258e49211579237595c7d91a39
     assemblyName: Unity.XR.Interaction.Toolkit
     namespaceName: UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Theme.Primitives
@@ -2043,7 +2061,7 @@ ScriptsOnlyBuild:
     className: QuaternionEulerAffordanceReceiver
   - hash:
       serializedVersion: 2
-      Hash: b5a3d647574df6b300903b753f55d3cb
+      Hash: 7ffe1ccd9bb3bd0d89cfb31f49b94428
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: activeController
@@ -2326,4 +2344,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/VRscene.unity
-  playerPath: /Users/haochen/Documents/Unity/hierarchy/408.apk
+  playerPath: /Users/haochen/Documents/Unity/hierarchy/423.apk

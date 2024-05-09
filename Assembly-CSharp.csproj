@@ -53,6 +53,7 @@
      <Compile Include="Assets/AlignController.cs" />
      <Compile Include="Assets/Scripts/JsonReader.cs" />
      <Compile Include="Assets/Scripts/SimpleJSONDotNetTypes.cs" />
+     <Compile Include="Assets/colorController.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/XR" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

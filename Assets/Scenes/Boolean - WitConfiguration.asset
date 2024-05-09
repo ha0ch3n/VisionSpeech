@@ -45,34 +45,85 @@ MonoBehaviour:
     lang: en
     isPrivate: 1
     createdAt: 2024-04-06T16:42:40-0700
-    trainingStatus: 2
-    lastTrainDuration: 49
-    lastTrainedAt: 2024-04-10T07:21:46-0700
-    nextTrainAt: 2024-04-10T07:22:45-0700
+    trainingStatus: 3
+    lastTrainDuration: 68
+    lastTrainedAt: 2024-04-23T11:06:31-0700
+    nextTrainAt: 2024-04-23T11:17:09-0700
     intents:
     - id: 3209137999381052
       name: bool
       entities:
       - name: union:union
         id: 725287199767867
-    - id: 1614497969363211
+    - id: 796183635726939
+      name: exclude
+      entities:
+      - name: exclude:exclude
+        id: 802314811292833
+    - id: 440894991790847
       name: intersect
       entities:
       - name: intersect:intersect
-        id: 7505298299532040
+        id: 1165866157920605
+    - id: 7638605592844448
+      name: minus
+      entities:
+      - name: minus:minus
+        id: 309265612195818
+    - id: 363529530013929
+      name: subtract
+      entities:
+      - name: subtract:subtract
+        id: 794345515550964
     entities:
+    - name: exclude
+      id: 1085651836031751
+      lookups:
+      - free-text
+      - keywords
+      roles:
+      - name: exclude
+        id: 802314811292833
+      keywords:
+      - keyword: exclude
+        synonyms:
+        - exclude
     - name: intersect
-      id: 1369773033734234
+      id: 1089998195419561
       lookups:
       - free-text
       - keywords
       roles:
       - name: intersect
-        id: 7505298299532040
+        id: 1165866157920605
       keywords:
       - keyword: intersect
         synonyms:
         - intersect
+    - name: minus
+      id: 2610544072459336
+      lookups:
+      - free-text
+      - keywords
+      roles:
+      - name: minus
+        id: 309265612195818
+      keywords:
+      - keyword: minus
+        synonyms:
+        - minus
+    - name: subtract
+      id: 637205418590941
+      lookups:
+      - free-text
+      - keywords
+      roles:
+      - name: subtract
+        id: 794345515550964
+      keywords:
+      - keyword: subtract
+        synonyms:
+        - subtract
     - name: union
       id: 645328587737060
       lookups:
@@ -616,4 +667,4 @@ MonoBehaviour:
   - Oculus.Voice.Demo, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - Meta.WitAi.Samples, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   relaxedResolution: 0
-  _lastRefreshSeconds: 1712758965.9500868
+  _lastRefreshSeconds: 1713896251.378176
